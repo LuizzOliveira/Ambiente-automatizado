@@ -232,55 +232,6 @@ def abrir_apps():
         except Exception as e:
             print(f"Erro ao abrir {app}: {e}")
 
-# # Função para fechar processos
-# def fechar_processos_por_nome(nomes):
-#     for processo in psutil.process_iter(['pid', 'name']):
-#         for nome in nomes:
-#             if nome.lower() in processo.info['name'].lower():
-#                 try:
-#                     p = psutil.Process(processo.info['pid'])
-#                     p.terminate()
-#                 except Exception as e:
-#                     print(f"Erro ao fechar {processo.info['name']}: {e}")
-
-# # Função para fechar janelas
-# def fechar_apps_navegadores():
-#     janelas = gw.getAllWindows()
-#     id_janela_principal = root.winfo_id()  # Obtém ID da janela principal
-#     # Fecha todas as janelas, exceto a principal
-#     for janela in janelas:
-#         if janela._hWnd != id_janela_principal and janela.visible:
-#             try:
-#                 janela.close()  # Fecha a janela
-#                 time.sleep(1)  # Espera um pouco antes de fechar a próxima
-#             except Exception as e:
-#                 print(f"Erro ao fechar {janela.title}: {e}")
-
-#     # Lista de processos para fechar
-#     processos_a_fechar = [
-#         'chrome.exe', 'firefox.exe', 'msedge.exe', 'explorer.exe', 
-#         'notepad.exe', 'calc.exe', 'WINWORD.EXE', 'excel.exe', 
-#         'powerpnt.exe', 'outlook.exe'
-#     ]
-    
-#     # Fechar processos sem abrir janela do Windows
-#     for processo in processos_a_fechar:
-#         subprocess.call(["taskkill", "/F", "/IM", processo], creationflags=subprocess.CREATE_NO_WINDOW)
-
-# # Função adicional para fechar processos por nome
-# def fechar_processos_por_nome(processos):
-#     for processo in processos:
-#         subprocess.call(["taskkill", "/F", "/IM", processo], creationflags=subprocess.CREATE_NO_WINDOW)
-
-#     # Lista de processos para fechar
-#     processos_a_fechar = [
-#         'chrome.exe', 'firefox.exe', 'msedge.exe', 'explorer.exe', 
-#         'notepad.exe', 'calc.exe', 'WINWORD.EXE', 'excel.exe', 
-#         'powerpnt.exe', 'outlook.exe'
-#     ]
-#     fechar_processos_por_nome(processos_a_fechar)
-
-
 
 
 # Função para excluir o ambiente
